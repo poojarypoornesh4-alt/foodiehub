@@ -96,7 +96,7 @@ See the LICENSE file for more information.
 AUTHOR
 --------------------------------------------------
 
-Created by: YOUR NAME
+Created by: TEAM FOODIE
 
 --------------------------------------------------
 THANK YOU
