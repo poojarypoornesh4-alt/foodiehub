@@ -1,159 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodieHub - Food Ordering</title>
+
+    <title>FoodieHub</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff7f2;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Header */
+        header {
+            background-color: #ff5a1f;
+            color: white;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #ffe0d2;
+        }
+
+        /* Main section */
+        main {
+            min-height: 75vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        /* Floating emoji */
+        .food {
+            font-size: 70px;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+
+        }
+
+        /* Welcome text */
+        .welcome {
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #ff5a1f;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        /* Buttons */
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .buttons a {
+            display: inline-block;
+            background-color: #ff5a1f;
+            color: white;
+            text-decoration: none;
+            padding: 12px 25px;
+            margin: 8px;
+            border-radius: 25px;
+            transition: 0.3s;
+        }
+
+        .buttons a:hover {
+            background-color: #e64b15;
+            transform: scale(1.08);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 15px;
+        }
+
+        footer p {
+            color: white;
+            font-size: 14px;
+        }
+
+    </style>
+
 </head>
 
 <body>
 
+    <!-- Header -->
+
     <header>
+
         <h1>🍔 FoodieHub</h1>
 
         <nav>
-            <a href="#home">Home</a> |
-            <a href="#menu">Menu</a> |
-            <a href="#login">Login</a> |
-            <a href="#signup">Sign Up</a>
+            <a href="index.html">Home</a>
+            <a href="login.html">Login</a>
+            <a href="signup.html">Sign Up</a>
         </nav>
+
     </header>
 
-    <hr>
+
+    <!-- Welcome Section -->
 
     <main>
 
-        <!-- Home -->
-        <section id="home">
-            <h2>Delicious Food, Delivered Fast!</h2>
+        <div class="food">
+            🍕
+        </div>
+
+        <div class="welcome">
+
+            <h2>Welcome to FoodieHub!</h2>
 
             <p>
-                Welcome to FoodieHub!
-                Order your favourite food from the comfort of your home.
+                Your favourite food, just a click away.
             </p>
-
-            <a href="#menu">View Menu</a>
-        </section>
-
-        <hr>
-
-        <!-- Menu -->
-        <section id="menu">
-            <h2>Our Menu</h2>
-
-            <article>
-                <h3>🍕 Margherita Pizza</h3>
-                <p>Cheesy and delicious pizza.</p>
-                <p>Price: ₹199</p>
-                <button>Order Now</button>
-            </article>
-
-            <article>
-                <h3>🍔 Cheese Burger</h3>
-                <p>Classic burger with cheese.</p>
-                <p>Price: ₹149</p>
-                <button>Order Now</button>
-            </article>
-
-            <article>
-                <h3>🍛 Chicken Biryani</h3>
-                <p>Spicy and flavourful chicken biryani.</p>
-                <p>Price: ₹249</p>
-                <button>Order Now</button>
-            </article>
-
-            <article>
-                <h3>🍝 White Sauce Pasta</h3>
-                <p>Creamy pasta with delicious sauce.</p>
-                <p>Price: ₹179</p>
-                <button>Order Now</button>
-            </article>
-
-            <article>
-                <h3>🍰 Chocolate Cake</h3>
-                <p>Soft and delicious chocolate cake.</p>
-                <p>Price: ₹129</p>
-                <button>Order Now</button>
-            </article>
-        </section>
-
-        <hr>
-
-        <!-- Login -->
-        <section id="login">
-            <h2>Login</h2>
-
-            <form>
-                <label for="email">Email:</label>
-                <br>
-                <input type="email" id="email" name="email" required>
-
-                <br><br>
-
-                <label for="password">Password:</label>
-                <br>
-                <input type="password" id="password" name="password" required>
-
-                <br><br>
-
-                <button type="submit">Login</button>
-            </form>
 
             <p>
-                Don't have an account?
-                <a href="#signup">Sign Up</a>
+                Discover delicious meals and enjoy
+                a simple food ordering experience.
             </p>
-        </section>
 
-        <hr>
+        </div>
 
-        <!-- Sign Up -->
-        <section id="signup">
-            <h2>Create an Account</h2>
 
-            <form>
-                <label for="name">Full Name:</label>
-                <br>
-                <input type="text" id="name" name="name" required>
+        <!-- Buttons -->
 
-                <br><br>
+        <div class="buttons">
 
-                <label for="signup-email">Email:</label>
-                <br>
-                <input type="email" id="signup-email" name="email" required>
+            <a href="login.html">
+                Login
+            </a>
 
-                <br><br>
+            <a href="signup.html">
+                Sign Up
+            </a>
 
-                <label for="signup-password">Password:</label>
-                <br>
-                <input type="password" id="signup-password" name="password" required>
-
-                <br><br>
-
-                <label for="confirm-password">Confirm Password:</label>
-                <br>
-                <input type="password" id="confirm-password" name="confirm-password" required>
-
-                <br><br>
-
-                <button type="submit">Create Account</button>
-            </form>
-
-            <p>
-                Already have an account?
-                <a href="#login">Login</a>
-            </p>
-        </section>
+        </div>
 
     </main>
 
-    <hr>
+
+    <!-- Footer -->
 
     <footer>
-        <h3>🍔 FoodieHub</h3>
-        <p>Your favourite food, just a click away.</p>
-        <p>© 2026 FoodieHub. All Rights Reserved.</p>
+
+        <p>© 2026 FoodieHub | All Rights Reserved</p>
+
     </footer>
 
 </body>
+
 </html>
